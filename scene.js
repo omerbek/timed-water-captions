@@ -69,4 +69,11 @@ seek.addEventListener('input', () => {
   draw();
 });
 
+document.querySelector('#save').addEventListener('click', () => {
+  const link = document.createElement('a');
+  link.download = 'timed-water-captions.png';
+  link.href = canvas.toDataURL('image/png');
+  link.click();
+});
+
 draw();
